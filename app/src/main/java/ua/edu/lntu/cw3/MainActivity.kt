@@ -43,7 +43,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun CustomList() {
     LazyColumn {
-        item { CustomListItem(title = "Заголовок", subtitle = "Підзаголовок", text = "Текст") }
+        item { CustomListItem(title = "Заголовок1", subtitle = "Підзаголовок1", text = "Текст1") }
+        item { CustomListItem(title = "Заголовок2", subtitle = "Підзаголовок2", text = "Текст2") }
+        item { CustomListItem(title = "Заголовок3", subtitle = "Підзаголовок3", text = "Текст3") }
     }
 }
 
