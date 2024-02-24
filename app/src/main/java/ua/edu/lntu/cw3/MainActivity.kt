@@ -37,10 +37,18 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
+@Composable
+fun LazyColumn() {
+    Text(
+        text = "First item"
+    )
+}
+
+
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     IPZ_CR_3Theme {
-        Greeting("Android")
+        LazyColumn()
     }
 }
