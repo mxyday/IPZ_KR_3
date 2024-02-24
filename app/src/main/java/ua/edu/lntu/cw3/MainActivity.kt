@@ -52,9 +52,12 @@ fun CustomList() {
 @Composable
 fun CustomListItem(title: String, subtitle: String, text: String) {
     Column {
-        Text(text = title)
-        Text(text = subtitle)
-        Text(text = text)
+        Text(text = title,
+            style = MaterialTheme.typography.headlineLarge)
+        Text(text = subtitle,
+            style = MaterialTheme.typography.labelMedium)
+        Text(text = text,
+            style = MaterialTheme.typography.bodySmall)
     }
 }
 
