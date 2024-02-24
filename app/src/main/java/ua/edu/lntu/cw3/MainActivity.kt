@@ -3,7 +3,10 @@ package ua.edu.lntu.cw3
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -38,17 +41,25 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun LazyColumn() {
-    Text(
-        text = "First item"
-    )
+fun CustomList() {
+    LazyColumn {
+        item { CustomListItem(title = "Заголовок", subtitle = "Підзаголовок", text = "Текст") }
+    }
 }
 
+@Composable
+fun CustomListItem(title: String, subtitle: String, text: String) {
+    Column {
+        Text(text = title)
+        Text(text = subtitle)
+        Text(text = text)
+    }
+}
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     IPZ_CR_3Theme {
-        LazyColumn()
+        CustomList()
     }
 }
